@@ -55,6 +55,14 @@ Keyboard navigation is supported. The modal can be closed using the Escape key. 
 
 Semantic elements such as `<section>`, `<article>`, `<h1>`, `<h2>`, and `<h3>` are used to improve readability and accessibility. This helps screen readers interpret the content properly and boosts SEO performance.
 
+## Further Improvements
+
+1. **Accessibility Enhancements**: Further enhance accessibility by adding ARIA roles and properties to the modal and other interactive elements. This will help assistive technologies better understand the structure of the application.
+
+2. **Enhanced Animations**: Implement animations that trigger only when elements enter the viewport, using Intersection Observer API. This approach can optimize performance and improve the user experience.
+
+3. **Performance Optimization**: Consider code-splitting and lazy loading for components that are not immediately required. This can significantly reduce initial load times.
+
 ## Installation and Setup
 
 ### Prerequisites
