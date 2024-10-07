@@ -13,6 +13,11 @@ h1 {
   left: -9999px;
 }
 
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
 .component1 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -265,6 +270,52 @@ h1 {
       height: 400px;
     }
   }
+}
+
+// modal
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+
+  &__content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+    border-radius: 8px;
+    background-color: white;
+
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+  }
+}
+
+.modal--visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 // animations
